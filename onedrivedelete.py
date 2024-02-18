@@ -52,7 +52,7 @@ def delete_items_in_folder(access_token, folder_id, count=0):
 def main():
     # Authenticate and get the access token
     access_token = authenticate_and_get_token()
-    
+    print("Access token:", access_token)
     # Get root folder or allow user to select a folder
     root_folder_id = 'root'
     target_folder_name = input("Enter the name of the target folder: ")
@@ -62,6 +62,7 @@ def main():
             headers={"Authorization": f"Bearer {access_token}"}
         )
         response_data = response.json()
+        print(response_data)
         for item in response_data['value']:
             if item['name'] == target_folder_name:
                 root_folder_id = item['id']

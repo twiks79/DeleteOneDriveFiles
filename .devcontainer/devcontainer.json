@@ -1,4 +1,8 @@
 {
-    "postCreateCommand": ".devcontainer/postCreateCommand.sh"
-  }
+    "postCreateCommand": ".devcontainer/postCreateCommand.sh",
+    "extensions": [
+      "ms-python.python",
+      "github.copilot"
+    ]
+}
   
